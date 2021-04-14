@@ -17,7 +17,8 @@ def convert(lines):
     viki_image_count = 0
     for line in lines:
         s = line.split(' ')
-        time = s[2:]
+        time = s[0]
+        print(time)
         name = s[1]
         for word in s[2:]:
             if name == 'Allen':
@@ -38,8 +39,6 @@ def convert(lines):
         (allen_word_count, allen_sticker_count, allen_image_count))
     print('viki 說了 %s 個字,傳了 %s 個貼圖, 傳了 %s 張圖片' % \
         (viki_word_count, viki_sticker_count, viki_image_count))
-    
-    # return new
 
 
 def write_file(filename, lines):
